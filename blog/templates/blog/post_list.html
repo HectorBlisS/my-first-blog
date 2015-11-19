@@ -3,14 +3,28 @@
             <title>Fixter blog</title>
         </head>
         <body>
-            <div>
-                <h1><a href="">BlisS Blog</a></h1>
-            </div>
 
-            <div>
-                {% for post in posts %}
-                	{{post}}<br/>
-                {% endfor %}
-            </div>
+
+
+
+   <div>
+        <h1><a href="/">BlisS - FixTeR - Blog</a></h1>
+    </div>
+
+    {% for post in posts %}
+        <div>
+            
+            <h1><a href="#">{{ post.title }}</a></h1>
+            <p>Publicado: {{ post.published_date }}</p>
+            <p>{{ post.text|linebreaks }}</p>
+        </div>
+    {% endfor %}
+
+
+
+
+
+
+
         </body>
     </html>
